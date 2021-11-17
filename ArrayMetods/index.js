@@ -79,8 +79,8 @@
 
 // console.log(getMessagesForBestStudents(allStud, retakeStud));
 
-//output:
-//['Good job, a', 'Good job, c']
+// output:
+// ['Good job, a', 'Good job, c']
 
 /// ////////////////////////////////////////
 
