@@ -1,4 +1,4 @@
-export const getSqueredNumbers = (arr) => arr.map((num) => num ** 2);
+export const getSqueredNumbers = (arr) => arr.map((num) => num * num );
 
 export const getOddNumbers = (arr) => arr.filter((num) => num % 2 === 1);
 
