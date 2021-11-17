@@ -205,3 +205,33 @@
 // console.log(arrAverage([2, 5, 6, 3]));
 /// //////////////////////////////////////////////////////////////
 
+/// ////////////// Calculator  //////////
+// const calc = (expression) => {
+//   if (typeof expression !== "string") {
+//     return null;
+//   }
+
+//   const [a, operation, b] = expression.split(" ");
+//   let result;
+
+//   switch (operation) {
+//     case "+":
+//       result = +a + +b;
+//       break;
+//     case "-":
+//       result = +a - +b;
+//       break;
+//     case "*":
+//       result = +a * +b;
+//       break;
+//     case "/":
+//       result = +a / +b;
+//       break;
+//   }
+
+//   return `${expression} = ${result}`;
+// };
+
+// console.log(calc('2 + 3'));
+
+/// //////////////////////
