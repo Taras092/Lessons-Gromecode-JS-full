@@ -18,10 +18,49 @@
 // 4 ( 4 / 2 (!), 4 / 3, 4 / 4) -> false
 
 // input: num
-// output: underfined
+// output: boolean
 
- function getPrimes(num) {
+/// 111  /////
+function isPrime (num) {
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return false
+    }
+  }
 
- }
+  return true;
+}
+
+function getPrimes (num) {
+  for (let i = 2; i <= num; i += 1) {
+    if (isPrime(i)) {
+      console.log(i);
+    }
+  }
+}
+
+getPrimes(15);
 
 
+/// 222  /////////////////
+// function getPrimes(num) {
+//   for (let i = 2; i <= num; i += 1) {
+//     // console.log('CHEKING NUMBER ' + i);
+//     let isPrime = true;
+
+//     for (let number = 2; number < i; number += 1) {
+//       // console.log('INNER NUMBER ' + i);
+//       if (i % number === 0) {
+//         // console.log('NUMBER ' + i + ' IS NOT PRIME');
+//         isPrime = false;
+//         break;
+//       }
+//     }
+
+//     if (isPrime) {
+//       console.log(i);
+//     }
+//   }
+// }
+
+// getPrimes(15);
