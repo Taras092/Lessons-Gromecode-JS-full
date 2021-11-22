@@ -174,9 +174,9 @@
 // //example 2:
 // //input
 // console.log(withdraw(['Ann', 'John', 'User'], [1400, 87, -6], 'User', 10));
-//output
-//-1
-//и массив balances должен быть [1400, 87, -6]
+// output
+// -1
+// и массив balances должен быть [1400, 87, -6]
 
 /// /////////////  Вивести слова які містять строчку text     ///////////////
 // function filterNames(arr, text) {
