@@ -2,28 +2,28 @@ const createLogger = () => {
   let memory = [];
 
   const logger = {
-    warn: function (message) {
+    warn(message) {
       memory.push({
         message,
         type: "warn",
         dateTime: new Date(),
       });
     },
-    error: function (message) {
+    error(message) {
       memory.push({
         message,
         type: "error",
         dateTime: new Date(),
       });
     },
-    log: function (message) {
+    log(message) {
       memory.push({
         message,
         type: "log",
         dateTime: new Date(),
       });
     },
-    getRecords: function (type) {
+    getRecords(type) {
       if (!type) {
         return [...memory].sort((a, b) => b.dateTime - a.dateTime);
       }

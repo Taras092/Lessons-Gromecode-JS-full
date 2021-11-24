@@ -6,6 +6,12 @@ console.log(res);
 
 const numbersList4 = [1, 2, 3, 4, 5];
 
+/// input:none
+/// output: num
+const newarr = numbersList4.shift();
+console.log(newarr);
+
+
 
 
 /*
@@ -38,10 +44,27 @@ function printResult(res) {
 
 sum(num1, num2, printResult)
 
-/// input:none
-/// output: num
-const newarr = numbersList4.shift();
-console.log(newarr);
-
+///   ///////
 
 const anotherNumbersList = [5, 0, 8, 10, -4, 50, 220];
+
+// input:func
+// otput:arr
+
+// callback
+// input:elem
+// otput:bool
+
+// const filterRes = anotherNumbersList.filter(function (num) {
+//   if (num > 5) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// });
+
+const filterRes = anotherNumbersList.filter((num) => {
+  return num > 5 
+});
+
+console.log(filterRes);
