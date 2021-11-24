@@ -6,7 +6,6 @@ export function getTitleElement() {
 
 export function getInputElement() {
   const inputElem = document.querySelector("input");
-  inputElem.getAttribute('type', 'text');
   console.dir(inputElem);
   return inputElem;
 }
