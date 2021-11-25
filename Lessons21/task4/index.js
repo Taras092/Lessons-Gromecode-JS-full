@@ -18,4 +18,3 @@ export function getGoal() {
   return elemGoal.outerHTML;
 }
 
-
