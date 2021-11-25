@@ -1,6 +1,6 @@
 "use strict";
 
-const tasks = [
+export const tasks = [
   { text: "Buy milk", done: false },
   { text: "Pick up Tom from airport", done: false },
   { text: "Visit party", done: false },
@@ -15,7 +15,7 @@ const tasks = [
 
 
 
-const renderTasks = (tasksList) => {
+export const renderTasks = (tasksList) => {
   const tasksElem = document.querySelector(".list");
 
   const tasksListElems = tasksList.map(({ text, done }) => {
