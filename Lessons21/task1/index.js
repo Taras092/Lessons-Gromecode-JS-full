@@ -13,10 +13,10 @@ const tasks = [
  * @return {undefined}
  */
 
- const tasksElem = document.querySelector(".list");
+
 
 const renderTasks = (tasksList) => {
-
+  const tasksElem = document.querySelector(".list");
 
   const tasksListElems = tasksList.map(({ text, done }) => {
     const tasksListElem = document.createElement("li");
