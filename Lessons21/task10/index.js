@@ -1,4 +1,4 @@
-export function finishFrom() {
+export function finishForm() {
   const form = document.querySelector('form');
 
   const inputPass = document.querySelector('input');
