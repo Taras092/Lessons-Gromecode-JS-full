@@ -18,7 +18,4 @@ export function getGoal() {
   return elemGoal.outerHTML;
 }
 
-console.log(getTitle());
-console.log(getDescription());
-console.log(getPlans());
-console.log(getGoal());
+
