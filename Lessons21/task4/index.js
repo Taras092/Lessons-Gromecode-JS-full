@@ -4,7 +4,7 @@ export function getTitle() {
 }
 
 export function getDescription() {
-  const elemAbout = document.querySelector(".abput");
+  const elemAbout = document.querySelector(".about");
   return elemAbout.innerText;
 }
 
