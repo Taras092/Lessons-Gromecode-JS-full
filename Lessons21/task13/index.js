@@ -1,4 +1,4 @@
-function getSection(num) {
+export function getSection(num) {
   const span = document.querySelectorAll('span');
   const arr = Array.from(span);
   const elem = arr.find(el => {
