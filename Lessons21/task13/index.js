@@ -1,7 +1,7 @@
 export function getSection(num) {
   const span = document.querySelectorAll(".box span");
   const arr = Array.from(span);
-  const elem = arr.find((el) => num === el.dataset.number);
+  const elem = arr.find((el) => num.toString() === el.dataset.number);
   if (elem) {
     return elem.closest('.box').dataset.section
   }
