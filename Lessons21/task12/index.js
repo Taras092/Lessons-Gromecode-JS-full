@@ -3,12 +3,12 @@ export function squaredNumbers() {
   const arr = Array.from(elem);
   const squaredEl = arr.map((el) => {
     const sqr = el.dataset.number ** 2;
-    console.log(sqr);
-    return el.setAttribute("data-squared-number", sqr);
+    el.setAttribute("data-squared-number", sqr);
+    return el;
   });
   return squaredEl;
 }
-squaredNumbers();
+console.log(squaredNumbers());
 
 //  function squaredNumbers1() {
 //   const elem = document.querySelector('.number');
