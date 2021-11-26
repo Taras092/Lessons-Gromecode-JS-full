@@ -3,7 +3,7 @@ export function getSection(num) {
   const arr = Array.from(span);
   const elem = arr.find((el) => num === el.dataset.number);
   if (elem) {
-    return elem.parentElement.dataset.section;
+    return elem.closest('.box').dataset.section
   }
 }
 
