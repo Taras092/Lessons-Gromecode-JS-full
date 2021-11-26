@@ -1,5 +1,5 @@
 export function getSection(num) {
-  const span = document.querySelectorAll("span");
+  const span = document.querySelectorAll(".box span");
   const arr = Array.from(span);
   const elem = arr.find((el) => num === el.dataset.number);
   if (elem) {
