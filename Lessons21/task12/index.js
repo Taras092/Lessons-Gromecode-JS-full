@@ -8,7 +8,7 @@ export function squaredNumbers() {
   });
   return squaredEl;
 }
-console.log(squaredNumbers());
+
 
 //  function squaredNumbers1() {
 //   const elem = document.querySelector('.number');
