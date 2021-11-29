@@ -49,6 +49,9 @@ removeHandles.addEventListener("click", remove);
 
 attachHandlers.addEventListener('click', add);
 
+document.addEventListener('DOMContentLoaded', () => {
+  attachHandlers();
+});
 
 // divElem.addEventListener("click", () => {
 //   console.log("div");
