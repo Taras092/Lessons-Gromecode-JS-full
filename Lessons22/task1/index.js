@@ -47,20 +47,7 @@ clear.addEventListener("click", () => {
 
 removeHandles.addEventListener("click", remove);
 
-// attachHandlers.addEventListener('click', add);
-
 document.addEventListener('DOMContentLoaded', () => {
   attachHandlers.addEventListener('click', add);
 });
 
-// divElem.addEventListener("click", () => {
-//   console.log("div");
-// });
-
-// const handler = () => {
-//   console.log('div1');
-// }
-
-// elem.addEventListener('click', handler);
-
-// elem.removeEventListener('click', handler);
