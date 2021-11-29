@@ -47,10 +47,10 @@ clear.addEventListener("click", () => {
 
 removeHandles.addEventListener("click", remove);
 
-attachHandlers.addEventListener('click', add);
+// attachHandlers.addEventListener('click', add);
 
 document.addEventListener('DOMContentLoaded', () => {
-  attachHandlers();
+  attachHandlers.addEventListener('click', add);
 });
 
 // divElem.addEventListener("click", () => {
