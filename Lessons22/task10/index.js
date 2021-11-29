@@ -2,7 +2,7 @@ const buttonElements = document.querySelectorAll(".pagination__page");
 const arr = Array.from(buttonElements);
 
 const handleClick = (event) => {
-  console.log(event.target.dataset);
+  console.log(event.target.dataset.pageNumber);
 };
 
-arr.forEach((el) => el.addEventListener("click", handleClick));
+arr.map((el) => el.addEventListener("click", handleClick));
