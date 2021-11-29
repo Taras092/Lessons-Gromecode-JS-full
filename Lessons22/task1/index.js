@@ -46,8 +46,9 @@ clear.addEventListener("click", () => {
 });
 
 removeHandles.addEventListener("click", remove);
+attachHandlers.addEventListener('click', add)
 
-document.addEventListener('DOMContentLoaded', () => {
-  attachHandlers.addEventListener('click', add);
+document.addEventListener("DOMContentLoaded", () => {
+  add();
 });
 
