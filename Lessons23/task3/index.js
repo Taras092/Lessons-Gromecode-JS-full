@@ -16,31 +16,40 @@ const tasks = [
   { text: "Buy meat", done: true },
 ];
 
+const randomId = () => Math.floor(Math.random() * 1000000).toString();
+
+tasks.map((obj) => {
+  obj.id = randomId();
+  return obj;
+});
+
+
 const listElem = document.querySelector(".list");
 
 const renderTasks = (tasksList) => {
   const tasksElems = [...tasksList]
     .sort((a, b) => a.done - b.done)
     .map((item) => {
-      const { text, done } = item;
+      const { text, done, id } = item;
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
       const checkbox = document.createElement("input");
       checkbox.setAttribute("type", "checkbox");
+      checkbox.dataset.id = id;
       checkbox.checked = done;
       checkbox.classList.add("list__item-checkbox");
-      checkbox.addEventListener("change", () => {
-        item.done = checkbox.checked;
-        renderTasks(tasksList);
-        // renderTasks(
-        //   tasksList.map((el) => {
-        //     if (el === item) {
-        //       return { ...item, done: checkbox.checked };
-        //     }
-        //     return el;
-        //   })
-        // );
-      });
+      // checkbox.addEventListener("change", () => {
+      //   item.done = checkbox.checked;
+      //   renderTasks(tasksList);
+      // renderTasks(
+      //   tasksList.map((el) => {
+      //     if (el === item) {
+      //       return { ...item, done: checkbox.checked };
+      //     }
+      //     return el;
+      //   })
+      // );
+      // });
       if (done) {
         listItemElem.classList.add("list__item_done");
       }
@@ -52,6 +61,15 @@ const renderTasks = (tasksList) => {
   listElem.append(...tasksElems);
 };
 
+const onToggleTask = ({ target }) => {
+  const id = target.dataset.id;
+  const clickEl = tasks.find((el) => el.id === id);
+  clickEl.done = target.checked;
+  renderTasks(tasks);
+};
+
+listElem.addEventListener("change", onToggleTask);
+
 const buttonElem = document.querySelector(".create-task-btn");
 
 const addNewTask = () => {
@@ -62,7 +80,7 @@ const addNewTask = () => {
   }
   inputElem.value = "";
   // renderTasks([{ text: str, done: false }, ...tasks]);
-  tasks.unshift({ text: str, done: false });
+  tasks.unshift({ text: str, done: false, id: randomId() });
   renderTasks(tasks);
 };
 
