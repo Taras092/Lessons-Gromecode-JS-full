@@ -19,7 +19,7 @@ const tasks = [
 const listElem = document.querySelector(".list");
 
 const renderTasks = (tasksList) => {
-  const tasksElems = tasksList
+  const tasksElems = [...tasksList]
     .sort((a, b) => a.done - b.done)
     .map((item) => {
       const { text, done } = item;
