@@ -5,14 +5,17 @@
 // 1. iterate obj1 keys
 // 2. compare if(value1 !== value2) =? false
 
-function compareObjects(obj1, obj4) {
-  for (const elem in obj1) {
-    if (obj1[elem] !== obj4[elem]) {
-      return false;
-    }
+function compareObjects(obj1, obj2) {
+  if (obj1.length !== obj2.length) {
+    return false;
   }
-  for (const elem in obj4) {
-    if (obj1[elem] !== obj4[elem]) {
+
+// if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+//   return false;
+// }
+
+  for (const elem in obj2) {
+    if (obj1[elem] !== obj2[elem]) {
       return false;
     }
   }

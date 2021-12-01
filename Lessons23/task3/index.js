@@ -30,14 +30,16 @@ const renderTasks = (tasksList) => {
       checkbox.checked = done;
       checkbox.classList.add("list__item-checkbox");
       checkbox.addEventListener("change", () => {
-        renderTasks(
-          tasksList.map((el) => {
-            if (el === item) {
-              return { ...item, done: checkbox.checked };
-            }
-            return el;
-          })
-        );
+        item.done = checkbox.checked;
+        renderTasks(tasksList);
+        // renderTasks(
+        //   tasksList.map((el) => {
+        //     if (el === item) {
+        //       return { ...item, done: checkbox.checked };
+        //     }
+        //     return el;
+        //   })
+        // );
       });
       if (done) {
         listItemElem.classList.add("list__item_done");
@@ -59,9 +61,9 @@ const addNewTask = () => {
     return;
   }
   inputElem.value = "";
-  renderTasks([{ text: str, done: false }, ...tasks]);
-  // tasks.unshift({ text: str, done: false });
-  // renderTasks(tasks);
+  // renderTasks([{ text: str, done: false }, ...tasks]);
+  tasks.unshift({ text: str, done: false });
+  renderTasks(tasks);
 };
 
 buttonElem.addEventListener("click", addNewTask);
