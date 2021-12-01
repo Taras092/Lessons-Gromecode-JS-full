@@ -62,13 +62,17 @@ const renderTasks = (tasksList) => {
 };
 
 const onToggleTask = ({ target }) => {
+  if ( target.tagName === 'LI') {
+    target = target.querySelector(`input[type="checkbox"]`);
+   target.checked = !target.checked;
+  }
   const id = target.dataset.id;
   const clickEl = tasks.find((el) => el.id === id);
   clickEl.done = target.checked;
   renderTasks(tasks);
 };
 
-listElem.addEventListener("change", onToggleTask);
+listElem.addEventListener("click", onToggleTask);
 
 const buttonElem = document.querySelector(".create-task-btn");
 
