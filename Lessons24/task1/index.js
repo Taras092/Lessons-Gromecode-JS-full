@@ -1,6 +1,6 @@
 export const weekDays = [ 'Su', 'Mo', 'Tu', 'We','Th', 'Fr', 'St']
 
-export const dayOfWeeek = (date, days) => {
+export const dayOfWeek = (date, days) => {
   const day = new Date(date).getDate();
   const dateInFuture = new Date(date).setDate(day + days);
 
