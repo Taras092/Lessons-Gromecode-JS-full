@@ -3,7 +3,7 @@
 
 // input: number
 // otput: number
-const calc = initValue => {
+export const calc = initValue => {
   let result = initValue;
   const calculator = {
     add(value) {
@@ -29,6 +29,6 @@ const calc = initValue => {
   return calculator;
 };
 
-const result = calc(3).add(2).mult(4).div(10).substract(5).result();
+// const result = calc(3).add(2).mult(4).div(10).substract(5).result();
 
-console.log(result);
+// console.log(result);
