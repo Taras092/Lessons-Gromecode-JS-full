@@ -10,5 +10,5 @@ export const getDiff = (startDate, endDate) => {
   return result;
 }
 
-// getDiff(new Date(2019, 0,), new Date(2020, 0, 3));
+// getDiff(new Date(2019, 0, 17, 17, 10), new Date(2020, 0, 3));
 // getDiff(new Date(2017, 0,), new Date(2020, 0, 3))
