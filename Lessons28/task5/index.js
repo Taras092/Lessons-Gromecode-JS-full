@@ -1,9 +1,12 @@
-
+// input: new Data
+// output: object whith metods
 
 export const shmoment = (date) => {
   const result = new Date(date);
 
   const calculatorData = {
+    // input: string and value
+    // otput: obj
     add(str, value) {
       if (str === 'years') {
         result.setFullYear(result.getFullYear() + value);
@@ -48,7 +51,7 @@ export const shmoment = (date) => {
   return calculatorData;
 }
 
-// const result2 = shmoment(new Date(2019, 0, 17, 17, 10), 5).add('months', 5).add('hours', 2).subtract('years', 1).add('days', 3).result();
+// const result2 = shmoment(new Date(2019, 0, 17, 17, 10)).add('months', 5).add('hours', 2).subtract('years', 1).add('days', 3).result();
 // console.log(result2);
 
 // const sum = (data ,value) => {
