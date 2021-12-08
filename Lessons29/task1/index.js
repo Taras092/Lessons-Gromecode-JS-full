@@ -17,7 +17,7 @@ export const addImage = (imgSrc, callback) => {
 };
 
 // callack function
-export const onImageLoaded = (error, imgElem) => {
+const onImageLoaded = (error, imgElem) => {
   if (error) {
     console.log(error);
     return;
