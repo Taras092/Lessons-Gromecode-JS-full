@@ -7,8 +7,9 @@
  */
 export const pinger = (count, period) => {
   let coun = count;
+  console.log('Ping');
   const interval = setInterval(() => {
-    if (coun-- > 0) {
+    if (--coun > 0) {
       console.log('Ping');
     } else {
       clearInterval(interval);
