@@ -6,14 +6,18 @@
  * @return {undefined}
  */
 export const pinger = (count, period) => {
+  let coun = count;
   const interval = setInterval(() => {
-    console.log('Ping');
+    if (coun-- > 0) {
+      console.log('Ping');
+    } else {
+      clearInterval(interval);
+    }
   }, period);
 
-  setTimeout(() => {
-    clearInterval(interval);
-  }, count * period);
-
+  // setTimeout(() => {
+  //   clearInterval(interval);
+  // }, count * period);
 };
 
 // examples
