@@ -5,7 +5,7 @@
  * @param {number} period
  * @return {undefined}
  */
- const pinger = (count, period) => {
+export const pinger = (count, period) => {
   const interval = setInterval(() => {
     console.log('Ping');
   }, period);
