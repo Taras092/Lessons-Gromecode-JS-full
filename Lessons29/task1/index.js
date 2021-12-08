@@ -1,4 +1,4 @@
-const addImage = (imgSrc, callback) => {
+export const addImage = (imgSrc, callback) => {
   const imgElem = document.createElement('img');
   imgElem.setAttribute('alt', 'My Photo');
   imgElem.src = imgSrc;
@@ -17,7 +17,7 @@ const addImage = (imgSrc, callback) => {
 };
 
 // callack function
-const onImageLoaded = (error, imgElem) => {
+export const onImageLoaded = (error, imgElem) => {
   if (error) {
     console.log(error);
     return;
