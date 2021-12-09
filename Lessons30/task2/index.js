@@ -10,7 +10,7 @@ const userDataPromise = new Promise(resolve => {
  * Ответьте себе на вопрос, какой тип данных имеет переменная userDataPromise?
  */
 
-
+console.log(userDataPromise);
 userDataPromise.then(data => console.log(data));
 
 
