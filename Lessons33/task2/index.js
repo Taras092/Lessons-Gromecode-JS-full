@@ -8,7 +8,7 @@ export function getTasksList() {
 export function getTaskById(taskId) {
   return fetch(`${baseUrl}/${taskId}`)
   .then(respons => respons.json());
-}
+};
 
 // examples
 // getTasksList().then(tasksList => {
