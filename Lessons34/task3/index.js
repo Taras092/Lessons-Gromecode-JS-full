@@ -14,7 +14,7 @@ const isValid = () => {
     passwordInputElem.reportValidity() &&
     userNameElem.reportValidity()
   ) {
-    registerBtn.disable = false;
+    registerBtn.disabled = false;
   }
   errorElem.textContent = "";
 };
