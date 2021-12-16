@@ -13,13 +13,13 @@ const renderTasks = tasksList => {
 
   const tasksElems = tasksList
     .sort((a, b) => a.done - b.done)
-    .map(({ text, done }, index) => {
+    .map(({ id, text, done }) => {
       const listItemElem = document.createElement('li');
       listItemElem.classList.add('list__item');
       const checkbox = document.createElement('input');
 
       checkbox.setAttribute('type', 'checkbox');
-      checkbox.setAttribute('data-id', index);
+      checkbox.setAttribute('data-id', id);
       checkbox.checked = done;
 
       checkbox.classList.add('list__item-checkbox');
@@ -37,34 +37,55 @@ const renderTasks = tasksList => {
 
 renderTasks(tasks);
 
-// events
-// 1. add event to the element
-// 2. create event handlers
+// // events
+// // 1. add event to the element
+// // 2. create event handlers
 
-// list
-// click
+// // list
+// // click
 
-// input: event
-// output: undef
+// // input: event
+// // output: undef
 
-// algo
-// 1.find task by id
-// 2. update task
-// 3. re-render
+// // algo
+// // 1.find task by id
+// // 2. update task
+// // 3. re-render
 function updateTaskHandler(event) {
-  console.dir(event.target.classList.contains('list__item-checkbox'));
-  console.dir(event.target.getAttribute('type'));
-
   if (!event.target.classList.contains('list__item-checkbox')) {
     return;
   }
 
-  const { id } = event.target.dataset;
+  const task = tasks.find((el) => el.id === Number(event.target.dataset.id));
+  task.done = event.target.checked;
+  task.done = !task.done;
+  renderTasks(tasks);
 }
 
 // input: string, func
 // output: undefiened
-const res = listElem.addEventListener('click', updateTaskHandler);
+listElem.addEventListener('click', updateTaskHandler);
+
+
+// algo
+// 1. get task text
+// 2. create task
+// 3. update tasks
+// 4. re-render
+
+const onAddNewTask = () => {
+  const inputElem = document.querySelector(".task-input");
+  const str = inputElem.value;
+  if (str === "") {
+    return;
+  }
+  inputElem.value = "";
+  // renderTasks([{ text: str, done: false }, ...tasks]);
+  tasks.unshift({ text: str, done: false, id: tasks.length + 1 });
+  renderTasks(tasks);
+};
+const buttonElem = document.querySelector(".create-task-btn");
+buttonElem.addEventListener("click", onAddNewTask);
 
 
 // WEB FLOW
@@ -72,3 +93,5 @@ const res = listElem.addEventListener('click', updateTaskHandler);
 // 2. render
 // 3. update data, don't update DOM
 // 4. re-render
+
+
