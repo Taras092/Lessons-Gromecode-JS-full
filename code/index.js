@@ -1,15 +1,16 @@
-function run() {
-  var a = 0;
-
-  if (a == 1) {
-    return c;
+var small = {
+  a: 1,
+  go: function(b,c,d){
+    console.log(this.a+b+c+d);
   }
-
-  for (let i = 1; i < 10; i++) {
-    console.log(i);
-  }
-
-  return (d = a);
 }
-
-run();
+var large = {
+  a: 100
+}
+small.go(2,3,4);
+// 1+2+3+4 => 10
+var bindTest = small.go.bind(large,2);
+console.log(bindTest);
+// function (b,c,d){console.log(this.a+b+c+d);}
+bindTest(3,4);
+// 100+2+3+4 => 109
