@@ -11,16 +11,18 @@ const tableWater = dataWater => {
     }
   });
 
-
   const newArray = array.map(el => dataWater.filter(obj => el === obj.collectiondate));
 
   const newData = newArray.map(el => {
     const arr = el.map(obj => {
-      const objMap = new Map();
-      return objMap.set(obj.collectiondate, { [obj.parameter_smarts]: obj.result_display });
-    })
-    return arr
-  })
+      const object = {
+        date: obj.collectiondate,
+        [obj.parameter_smarts]: obj.result_display,
+      };
+      return object;
+    });
+    return arr;
+  });
 
   console.log(newArray);
   console.log(newData);
