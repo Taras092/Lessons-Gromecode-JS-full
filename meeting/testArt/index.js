@@ -5,7 +5,7 @@ const data = [...waterData.portal_qry_wq];
 const tableWater = dataWater => {
   const array = [];
 
-  const dd = dataWater.forEach(obj => {
+  dataWater.forEach(obj => {
     if (!array.includes(obj.collectiondate)) {
       return array.push(obj.collectiondate);
     }
